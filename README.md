@@ -7,5 +7,7 @@ ToDo
 =================
 
 Get Smart Table Global Search working
+
 Get Smart Table sorting working
+
 add D3js visulaization
