@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="microsoft">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" />
+    <style type="text/css" media="all">
+      body { 
+    padding-top: 65px; 
+      }
+    </style>
+  </head>
+  <body>
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle Navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">EMC Real-time Bigger Data</a>
+          </div>
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="#">Home</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav><br />
+      <div class="container">
+  	<div class="container" ng-controller="MsInvController">
+      <select ng-model="selectedDuns" ng-options="item.id as item.name for item in companyList" ng-change="getData()">
+        <option value="">Select Account</option>
+      </select><br />
+			<!--<h2><span ng-show="myData" class="label label-primary" ng-bind="myData['name']"></span></h2><br />
+			<h3><span class="label label-info" ng-show="myData"><span class="badge" ng-show="myData"><span class="glyphicon glyphicon-snowflake" aria-hidden="true"></span></span>&nbsp;<span ng-bind="myData['weather']['weather']"></span></span></h3>-->
+			<table st-table="myData" st-safe-src="myData" class="table table-striped">
+				<thead>
+					<tr>
+						<th>Customer Name</th>
+						<th>S/N</th>
+						<th>Product</th>
+						<th st-sort="Microcode">Microcode</th>
+						<th>Contract End</th>
+					</tr>
+					<!--<tr>
+						<th colspan="5"><input st-search class="input-sm form-control" placeholder="search ..." type="text"/></th>
+					</tr>-->
+				</thead>
+				<tbody>
+					<tr ng-repeat="row in myData">
+						<td ng-bind="row['CS Customer Name']"></td>
+						<td ng-bind="row['Item Serial Number']"></td>
+						<td ng-bind="row['Product Name']"></td>
+						<td ng-bind="row['Microcode']"></td>
+						<td ng-bind="row['Contract Subline End Date']"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+  </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/lorenzofox3/Smart-Table/master/dist/smart-table.debug.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://raw.githubusercontent.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-0.12.0.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
