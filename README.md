@@ -6,8 +6,8 @@ angularjs + smart-table + bootstrap grab of inventory data and currently present
 ToDo
 =================
 
-Get Smart Table Global Search working
+Get Smart Table Global Search working ----> Done
 
-Get Smart Table sorting working
+Get Smart Table sorting working ------> Done
 
 add D3js visulaization
