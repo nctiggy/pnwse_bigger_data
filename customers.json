@@ -1,0 +1,42 @@
+[
+	{
+		"name": "Microsoft",
+		"id": "081466849"
+	},
+	{
+		"name": "Costco",
+		"id": "103391843"
+	},
+	{
+		"name": "Nordstrom",
+		"id": "007942915"
+	},
+	{
+		"name": "PSE",
+		"id": "831703157"
+	},
+	{
+		"name": "REI",
+		"id": "009483355"
+	},
+	{
+		"name": "Sunguard",
+		"id": "101422731"
+	},
+	{
+		"name": "Starbucks",
+		"id": "155366107"
+	},
+	{
+		"name": "Intel",
+		"id": "047897855"
+	},
+	{
+		"name": "Disney",
+		"id": "932660376"
+	},
+	{
+		"name": "T-Mobile",
+		"id": "068528376"
+	}
+]
