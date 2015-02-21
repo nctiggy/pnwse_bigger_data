@@ -10,4 +10,4 @@ Get Smart Table Global Search working ----> Done
 
 Get Smart Table sorting working ------> Done
 
-add D3js visulaization
+Add VMAX Modal for kicking off MiTrend MicroServices
