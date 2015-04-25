@@ -22,7 +22,7 @@
 		}
 	];
 
-  app.controller("MsInvController", function($scope, $http, $filter, InventoryFactory, ModelFactory) {
+  app.controller("MsInvController", function($scope, $http, InventoryFactory) {
     $scope.companyList = new Array();
     $scope.selectedCustomer = "Select Customer";
    // $scope.selectedDuns = null;
@@ -49,6 +49,16 @@
 						return model;
 				}
 	};
+
+//		$scope.open = function(sn) {
+//			var modalInstance = $modal.open({
+//				templateUrl: 'arrayModal.html',
+//				controller: 'ArrayModalCtrl',
+//			});
+//		};
+
+
+
     $scope.getData = function(selectedDuns,selectedName) {
 			$scope.selectedCustomer = selectedName;
     	InventoryFactory.getInv(selectedDuns).success(function(data) {
@@ -58,10 +68,19 @@
 		};
 	});
 
+//	app.controller('ArrayModalCtrl', function($scope, $modalInstance, sn) {
+//		$scope.sn = sn;
+//		$scope.ok = function() {
+//			$modalInstance.close()
+//		};
+//	});
+
+
+
   app.factory("InventoryFactory", function($http) {
     return {
       getInv: function(dunId){
-        return $http.get('http://opsconsole.corp.emc.com/sitelookup/models/getdataTLA.php?fld=Global%20Duns%20Number&val=' + dunId + '&_search=false&nd=1415402285504&rows=4000&page=1&sidx=&sord=asc')
+        return $http.get('http://pnwreport.bellevue.lab/api/installs/' + dunId)
         //return $http.get('http://services.faa.gov/airport/status/' + air + '?format=application/json')
 			}
     }

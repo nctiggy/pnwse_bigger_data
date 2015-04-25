@@ -71,6 +71,7 @@
 						<th st-sort="MODEL">Model</th>
 						<th st-sort="MICROCODE">Microcode</th>
 						<th st-sort="City">City</th>
+						<th st-sort="PARTY_NUMBER">SiteID</th>
 						<th st-sort="ITEM_INSTALL_DATE">Install Date</th>
 						<th st-sort="CONTRACT_SUBLINE_END_DATE">Contract End</th>
 					</tr>
@@ -86,6 +87,7 @@
 						<td ng-bind="modelName(row.MODEL)"></td>
 						<td ng-bind="row.MICROCODE"></td>
 						<td ng-bind="row.City"></td>
+						<td ng-bind="row.PARTY_NUMBER"></td>
 						<td ng-bind="row.ITEM_INSTALL_DATE"></td>
 						<td ng-bind="row.CONTRACT_SUBLINE_END_DATE"></td>
 					</tr>
@@ -101,9 +103,9 @@
 		</div>
 		</div>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
-    <script type="text/javascript" src="https://raw.githubusercontent.com/lorenzofox3/Smart-Table/master/dist/smart-table.debug.js"></script>
+    <script type="text/javascript" src="https://raw.githubusercontent.com/lorenzofox3/Smart-Table/master/dist/smart-table.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://raw.githubusercontent.com/angular-ui/bootstrap/gh-pages/ui-bootstrap-0.12.1.min.js"></script>
+    <script type="text/javascript" src="ngbootstrap.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
   </body>
